@@ -12,6 +12,7 @@ namespace CineMania.Data
         }
 
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<ContactInfo> Contacts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -89,7 +90,7 @@ namespace CineMania.Data
                     ReleaseDate = DateTime.Parse("1976-11-29")
                 }
             };
-          
+             modelBuilder.Entity<ContactInfo>().ToTable("Contacts");
             modelBuilder.Entity<Movie>().HasData(movies);
             base.OnModelCreating(modelBuilder);
         }

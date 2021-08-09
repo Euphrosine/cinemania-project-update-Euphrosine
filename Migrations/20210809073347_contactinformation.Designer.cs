@@ -3,14 +3,16 @@ using System;
 using CineMania.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CineMania.Migrations
 {
     [DbContext(typeof(CinemaniaContext))]
-    partial class CinemaniaContextModelSnapshot : ModelSnapshot
+    [Migration("20210809073347_contactinformation")]
+    partial class contactinformation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
