@@ -19,6 +19,12 @@
         </div>
         <div class="col-md-3">
             <h5>Related Movies</h5>
+            @foreach (var real in @Model.RelatedMovie)
+            {
+                <a class="text-decoration-none" asp-page="./Details" asp-route-id="@real.Id">
+                    <img width="100" height="120" class="img-thumbnail" src="/images/posters/@real.ImageName" >
+                </a>
+            }
         </div>
     </dl>
 </div>
